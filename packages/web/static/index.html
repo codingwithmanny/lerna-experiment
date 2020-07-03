@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+  </head>
+  <body>
+    <h1>From Website</h1>
+
+    <p>Retrieving Data From Backend</p>
+
+    <div id="data">Loading...</div>
+
+    <script type="text/javascript">
+      window.addEventListener("load", () => {
+        const el = document.querySelector("#data");
+        fetch("http://localhost:5000")
+          .then((response) => {
+            const json = response.json();
+            if (response.ok) {
+              return json;
+            }
+            return json.then((data) => Promise.reject(data));
+          })
+          .then((json) => {
+            el.innerHTML = JSON.stringify(json);
+          })
+          .catch((error) => {
+            console.log("Error", error);
+            el.innerHTML = "There was an error";
+          });
+      });
+    </script>
+  </body>
+</html>

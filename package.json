@@ -1,0 +1,17 @@
+{
+  "name": "cookie-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "start": "lerna run start"
+  }
+}
