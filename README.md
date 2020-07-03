@@ -7,7 +7,7 @@ The most noticeable is `express` whic is being used by all 3.
 You can specify specify dependencies for `packages` by doing:
 
 ```bash
-yarn add cors --scope api;
+yarn add cors -W --scope api;
 # yarn add {dependency} -W --scope {package-directory}
 # -W flag (or --ignore-workspace-root-check)
 ```
