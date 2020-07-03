@@ -23,14 +23,6 @@ const App = () => {
         console.log("Error", error);
         setLoading(false);
       });
-    // try {
-    //   const response = fetch("http://localhost:5000");
-    //   const responseJson = await response.json();
-    //   console.log(responseJson);
-    // } catch (error) {
-    //   console.log("ERROR", error);
-    //   setLoading(false);
-    // }
     return () => {};
   }, []);
 
